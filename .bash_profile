@@ -6,7 +6,9 @@ alias vi='vim'
 alias x='exit'
 alias huh='ps aux | grep '
 alias gs='git status'
+alias ga='git add'
 alias gc='git commit -m'
+alias gp='git push'
 export PATH="/Users/Chad/Library/Python/2.7/bin:$HOME/bin:$PATH"
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
