@@ -8,6 +8,7 @@ set bs=2
 set pastetoggle=<F2>
 set clipboard=unnamed
 set relativenumber
+let mapleader=";"
 
 " Powerline Settings
 set  rtp+=/Users/Chad/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
@@ -36,7 +37,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-n> :NERDTreeToggle<CR>
 
 " EasyMotion Settings
-map <leader><Leader> <Plug>(easymotion-w)
+map <Leader><Leader> <Plug>(easymotion-w)
 
 " Show Whitespace
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
