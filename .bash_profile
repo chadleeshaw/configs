@@ -7,7 +7,9 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ll='ls -Glah'
 alias vi='vim'
 alias x='exit'
+alias c='clear'
 alias huh='ps aux | grep '
+alias boom-bitch!='figlet -cf big "Boom Bitch!"'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
@@ -19,3 +21,6 @@ powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /Users/Chad/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+
+# Go Home
+export GOPATH=$HOME/src/utsysadmin/go
