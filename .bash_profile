@@ -22,5 +22,7 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /Users/Chad/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
 
-# Go Home
+# Paths
 export GOPATH=$HOME/src/utsysadmin/go
+export PYTHONPATH=$PYTHONPATH:/Library/Python/2.7/site-packages/
+export PATH="/usr/local/opt/libpq/bin:$PATH"
