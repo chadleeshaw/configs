@@ -38,7 +38,15 @@ execute pathogen#infect()
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "map <C-n> :NERDTreeTabsToggle<CR>
 "let g:nerdtree_tabs_open_on_console_startup=1
-map <C-n> <plug>NERDTreeTabsToggle<CR>
+let g:NERDTreeShowIgnoredStatus = 1
+nnoremap <leader>q :Sbd<CR>
+nnoremap <leader>qm :Sbdm<CR>
+"map <C-n> <plug>NERDTreeTabsToggle<CR>
+nmap <silent> <C-n> :call g:WorkaroundNERDTreeToggle()<CR>
+
+function! g:WorkaroundNERDTreeToggle()
+  try | NERDTreeToggle | catch | silent! NERDTree | endtry
+endfunction
 
 " EasyMotion Settings
 map <Leader><Leader> <Plug>(easymotion-w)
