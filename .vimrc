@@ -11,10 +11,11 @@ set relativenumber
 set nocompatible
 let mapleader=";"
 :imap jj <Esc>
+autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
 
 " Powerline Settings
-set  rtp+=/Users/Chad/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
-set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline
+set rtp+=/usr/local/opt/python/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/powerline/bindings/vim
+set guifont=Menlo\ for\ Powerline
 set laststatus=2
 set encoding=utf-8
 set t_Co=256
@@ -33,12 +34,7 @@ set expandtab
 execute pathogen#infect()
 
 " NerdTree Settings
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"map <C-n> :NERDTreeTabsToggle<CR>
-"let g:nerdtree_tabs_open_on_console_startup=1
-let g:NERDTreeShowIgnoredStatus = 1
+let g:NERDTreeGitStatusShowIgnored = 1
 nnoremap <leader>q :Sbd<CR>
 nnoremap <leader>qm :Sbdm<CR>
 "map <C-n> <plug>NERDTreeTabsToggle<CR>
